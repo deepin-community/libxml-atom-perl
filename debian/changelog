@@ -1,5 +1,379 @@
-template-repository (1.0-1) unstable; urgency=medium
+libxml-atom-perl (0.43-1) unstable; urgency=medium
 
-  * Initial release
+  [ Salvatore Bonaccorso ]
+  * Update Vcs-* headers for switch to salsa.debian.org
 
- -- Tsic404 <liuheng@deepin.org>  Sat, 28 Jan 2023 13:46:49 +0800
+  [ Debian Janitor ]
+  * Trim trailing whitespace.
+  * Wrap long lines in changelog entries: 0.22-1, 0.16a-0.1.
+  * Bump debhelper from old 11 to 12.
+  * Set debhelper-compat version in Build-Depends.
+  * Set upstream metadata fields: Bug-Submit.
+  * Remove obsolete fields Contact, Name from debian/upstream/metadata
+    (already present in machine-readable debian/copyright).
+
+  [ gregor herrmann ]
+  * debian/watch: use uscan version 4.
+
+  [ Debian Janitor ]
+  * Bump debhelper from old 12 to 13.
+
+  [ gregor herrmann ]
+  * Import upstream version 0.43.
+  * Drop patches, both applied upstream.
+  * Update years of upstream and packaging copyright.
+  * Make (test) dependency on libxml-libxml-perl versioned.
+  * Declare compliance with Debian Policy 4.6.0.
+  * Set Rules-Requires-Root: no.
+  * Drop unneeded alternative from (build) dependencies.
+  * Annotate test-only build dependencies with <!nocheck>.
+
+ -- gregor herrmann <gregoa@debian.org>  Sat, 15 Jan 2022 18:48:48 +0100
+
+libxml-atom-perl (0.42-2.1) unstable; urgency=medium
+
+  * Non maintainer upload by the Reproducible Builds team.
+  * No source change upload to rebuild on buildd with .buildinfo files.
+
+ -- Holger Levsen <holger@debian.org>  Mon, 28 Dec 2020 19:25:45 +0100
+
+libxml-atom-perl (0.42-2) unstable; urgency=medium
+
+  * Team upload
+
+  [ Alex Muntada ]
+  * Remove inactive pkg-perl members from Uploaders.
+
+  [ Damyan Ivanov ]
+  * declare conformance with Policy 4.1.2 (no changes needed)
+
+  [ Florian Schlichting ]
+  * Add no-dot-in-inc.patch (closes: #871801)
+  * Bump dh compat to level 11
+  * Declare compliance with Debian Policy 4.1.3
+
+ -- Florian Schlichting <fsfs@debian.org>  Tue, 02 Jan 2018 19:28:38 +0100
+
+libxml-atom-perl (0.42-1) unstable; urgency=medium
+
+  [ Salvatore Bonaccorso ]
+  * debian/control: Use HTTPS transport protocol for Vcs-Git URI
+
+  [ gregor herrmann ]
+  * debian/copyright: change Copyright-Format 1.0 URL to HTTPS.
+  * debian/upstream/metadata: use HTTPS for GitHub URLs.
+  * Remove Brian Cassidy from Uploaders. Thanks for your work!
+  * Remove Jaldhar H. Vyas from Uploaders. Thanks for your work!
+  * Remove Jonathan Yu from Uploaders. Thanks for your work!
+  * Remove Jose Luis Rivas from Uploaders. Thanks for your work!
+  * Remove Rene Mayorga from Uploaders. Thanks for your work!
+
+  * Import upstream version 0.42.
+    Fixes "Use of the encoding pragma is deprecated" (Closes: #826449)
+  * Update debian/upstream/metadata.
+  * Update debian/copyright.
+    - Update years of packaging copyright.
+    - Add new upstream copyright holder.
+    - Remove stanza about dropped files.
+  * Update build dependencies and debhelper compatibility level.
+  * Update use-Digest-SHA.patch.
+  * debian/rules: forbid DNS queries during tests.
+  * debian/rules: remove empty manpages.
+  * Declare compliance with Debian Policy 4.0.0.
+
+ -- gregor herrmann <gregoa@debian.org>  Sat, 24 Jun 2017 15:50:45 +0200
+
+libxml-atom-perl (0.41-2) unstable; urgency=low
+
+  [ gregor herrmann ]
+  * debian/control: update {versioned,alternative} (build) dependencies.
+
+  [ Salvatore Bonaccorso ]
+  * Change Vcs-Git to canonical URI (git://anonscm.debian.org)
+  * Change search.cpan.org based URIs to metacpan.org based URIs
+
+  [ Axel Beckert ]
+  * debian/copyright: migrate pre-1.0 format to 1.0 using "cme fix dpkg-
+    copyright"
+
+  [ gregor herrmann ]
+  * Strip trailing slash from metacpan URLs.
+
+  [ Salvatore Bonaccorso ]
+  * Update Vcs-Browser URL to cgit web frontend
+
+  [ gregor herrmann ]
+  * Add debian/upstream/metadata
+  * Mark package as autopkgtest-able.
+  * Declare compliance with Debian Policy 3.9.6.
+  * Add explicit (build) dependency on libcgi-pm-perl.
+  * Update years of packaging copyright.
+
+ -- gregor herrmann <gregoa@debian.org>  Wed, 17 Jun 2015 22:04:22 +0200
+
+libxml-atom-perl (0.41-1) unstable; urgency=low
+
+  * New upstream release.
+  * Add (build) dependency on libdatetime-timezone-perl.
+  * Refresh use-Digest-SHA.patch.
+
+ -- gregor herrmann <gregoa@debian.org>  Tue, 27 Sep 2011 22:29:47 +0200
+
+libxml-atom-perl (0.40-1) unstable; urgency=low
+
+  [ Ansgar Burchardt ]
+  * debian/control: Convert Vcs-* fields to Git.
+
+  [ Salvatore Bonaccorso ]
+  * debian/copyright: Replace DEP5 Format-Specification URL from
+    svn.debian.org to anonscm.debian.org URL.
+
+  [ gregor herrmann ]
+  * New upstream release.
+  * Update years of packaging copyright.
+  * Bump debhelper compatibility level to 8.
+
+ -- gregor herrmann <gregoa@debian.org>  Sat, 24 Sep 2011 20:58:26 +0200
+
+libxml-atom-perl (0.39-1) unstable; urgency=low
+
+  * Team upload.
+  * New upstream release.
+
+ -- Ansgar Burchardt <ansgar@debian.org>  Tue, 21 Jun 2011 18:22:39 +0200
+
+libxml-atom-perl (0.38-1) unstable; urgency=low
+
+  * Team upload.
+  * New upstream release.
+  * Use Digest::SHA instead of Digest::SHA1 and remove libdigest-sha1-perl
+    from (Build-)Depends.
+    + new patch: use-Digest-SHA.patch
+  * Use source format 3.0 (quilt).
+  * debian/copyright: Formatting changes; refer to GPL-1; refer to "Debian
+    systems" instead of "Debian GNU/Linux systems".
+  * Bump Standards-Version to 3.9.2.
+
+ -- Ansgar Burchardt <ansgar@debian.org>  Thu, 02 Jun 2011 19:00:01 +0200
+
+libxml-atom-perl (0.37-1) unstable; urgency=low
+
+  * New upstream release
+
+ -- Jonathan Yu <jawnsy@cpan.org>  Wed, 30 Dec 2009 23:41:27 -0500
+
+libxml-atom-perl (0.36-1) unstable; urgency=low
+
+  [ Jonathan Yu ]
+  * New upstream release
+  * Add myself to Uploaders
+  * Rewrite control description
+
+  [ Brian Cassidy ]
+  * New upstream release
+
+  [ gregor herrmann ]
+  * debian/rules: remove workaround for Module::AutoInstall, not needed
+    anymore. Set back debhelper dependency in debian/control.
+
+  [ Nathan Handler ]
+  * debian/watch: Update to ignore development releases.
+
+ -- Jonathan Yu <jawnsy@cpan.org>  Tue, 22 Dec 2009 08:33:42 -0500
+
+libxml-atom-perl (0.34-1) unstable; urgency=low
+
+  [ Brian Cassidy ]
+  * New upstream release
+  * debian/copyright:
+    + update copyright on inc/*
+    + update format
+  * debian/control: Standards-Version to 3.8.1
+
+  [ Damyan Ivanov ]
+  * Remove Tim Peeler <thp@linuxforce.net> from Uploaders on MIA team request.
+    Closes: #519384
+  * add myself to Uploaders
+
+  [ gregor herrmann ]
+  * Set PERL5_CPANPLUS_IS_RUNNING in debian/rules to keep Module::AutoInstall
+    from loading CPAN.pm; adjust dependency on debhelper in debian/control.
+
+ -- Brian Cassidy <brian.cassidy@gmail.com>  Thu, 30 Apr 2009 09:25:54 -0300
+
+libxml-atom-perl (0.33-1) unstable; urgency=low
+
+  [ Brian Cassidy ]
+  * New upstream release
+  * debian/control: Add myself to Uploaders
+
+  [ Jaldhar H. Vyas ]
+  * debian/control: Added myself to Uploaders
+
+ -- Jaldhar H. Vyas <jaldhar@debian.org>  Thu, 15 Jan 2009 15:34:26 -0500
+
+libxml-atom-perl (0.32-1) unstable; urgency=low
+
+  * New upstream release.
+
+ -- gregor herrmann <gregoa@debian.org>  Fri, 28 Nov 2008 21:00:31 +0100
+
+libxml-atom-perl (0.31-1) unstable; urgency=low
+
+  * debian/control: Changed: Switched Vcs-Browser field to ViewSVN
+    (source stanza).
+  * New upstream release.
+
+ -- gregor herrmann <gregoa@debian.org>  Sat, 22 Nov 2008 17:31:09 +0100
+
+libxml-atom-perl (0.29-1) unstable; urgency=low
+
+  [ David Paleino ]
+  * debian/control: removed myself from Uploaders
+
+  [ Jose Luis Rivas ]
+  * New upstream release
+  * Switched to debhelper v7, updated debian/rules, debian/compat and build
+    dependencies to debhelper >= 7 on debian/control.
+  * Bumped to Standards-Version 3.8.0 wo/ changes needed.
+  * debian/copyright: Updated formatting.
+  * Added me as Uploader.
+
+  [ gregor herrmann ]
+  * debian/watch: extended regexp for matching upstream releases.
+  * debian/copyright:
+    - Perl is licensed under GPL-1+, not GPL-2+
+    - add information for files under inc/
+    - add Upstream-Name header
+  * debian/control:
+    - change my email address
+    - re-wrap a long line
+    - remove a spurious space
+
+ -- Jose Luis Rivas <ghostbar38@gmail.com>  Sun, 02 Nov 2008 03:28:32 -0430
+
+libxml-atom-perl (0.28-1) unstable; urgency=low
+
+  [ David Paleino ]
+  * Newer upstream release 0.28
+
+  [ gregor herrmann ]
+  * Don't ignore return value of ($MAKE) distclean.
+  * debian/control: Added: Vcs-Svn field (source stanza); Vcs-Browser
+    field (source stanza); Homepage field (source stanza). Removed:
+    Homepage pseudo-field (Description); XS-Vcs-Svn fields.
+
+  [ David Paleino ]
+  * New upstream release (Closes: #442817)
+  * debian/control:
+    - Added myself to Uploaders field
+    - Added Homepage field
+    - Fixed dependency on libxml-xml-perl to (>= 1.64) from (>= 1.54)
+  * debian/rules:
+    - Using new approach to build the package (using environment variables)
+    - Moved $(MAKE) test under the build target, from the install
+    - Removed useless comments
+    - Some general cleanup
+  * debian/patches/:
+    - test_cases.dpatch adjusted to apply cleanly on new testfiles
+
+  [ Damyan Ivanov ]
+  * debian/rules:
+    + Removed unneeded dh_link and dh_strip calls
+    + Move dh_clean $stamp_files before distclean
+    + Remove unneeded OPTIMIZE="..."
+    + Use PERL_AUTOINSTALL=--skip when invoking $(Perl) Makefile.PL to avoid
+      downloading missing dependencies from CPAN
+  * debian/control -- Bumped build-dependency on
+    libxml-libxml-perl to 1.64 as well
+
+  [ Rene Mayorga ]
+  * Remove test-cases patch, this problem is solved with
+    libxml-libxml-perl >= 1.64
+  * debian/control
+    + Raise debhelper version to 6
+    + set standards-version to 3.7.3
+    + wrap B-D-I and Uploaders field
+    + remove quilt from B-D
+    + remove libxml-xpath perl from B-D-I and Depends (Closes: #459580)
+      thanks goes to niko
+  * debian/rules
+    + remove quilt
+    + remove VENDORARCHEXP and INSTALLVENDORARCH
+    + conditional remove of /usr/lib/perl5
+    + Don't install README file, it only have Install Instructions
+  * debian/copyright: Convert to machine-readble format, and copyright
+    notice from upstream
+  * Improve debian/watch
+
+ -- Rene Mayorga <rmayorga@debian.org.sv>  Mon, 11 Feb 2008 10:46:28 -0600
+
+libxml-atom-perl (0.25-2) unstable; urgency=low
+
+  * Test cases changed to comply with new version output's from
+    libxml-libmxl-perl (Closes: #432544)
+  * dpatch added to Build-Depends
+  * debian/rules modified according to use dpatch
+  * Added myself to debian/control - Uploaders
+
+ -- Rene Mayorga <rmayorga@debian.org.sv>  Tue, 10 Jul 2007 14:24:45 -0600
+
+libxml-atom-perl (0.25-1) unstable; urgency=low
+
+  * New upstream release
+  * debian/control: Added me to Uploaders
+
+ -- Krzysztof Krzyzaniak (eloy) <eloy@debian.org>  Fri, 20 Apr 2007 14:53:16 +0200
+
+libxml-atom-perl (0.23-1) unstable; urgency=low
+
+  * New upstream release.
+
+ -- gregor herrmann <gregor+debian@comodo.priv.at>  Sat,  2 Sep 2006 19:59:52 +0200
+
+libxml-atom-perl (0.22a-1) unstable; urgency=low
+
+  * Arghhh!  I did the debian-native thing too!
+
+ -- Carlo Segre <segre@debian.org>  Mon, 21 Aug 2006 23:56:28 -0500
+
+libxml-atom-perl (0.22-1) unstable; urgency=low
+
+  * New upstream release (closes: #383789).
+  * New maintainer: Debian Perl Group.
+  * Set Standards-Version to 3.7.2 (no changes).
+  * Move debhelper to Build-Depends.
+  * Set debhelper compatibility level to 5.
+  * Add watch file.
+  * Activate tests in debian/rules.
+  * Ack previous NMUs (closes: #350850, #331004).
+  * Add libclass-data-inheritable-perl and libxml-xpath-perl to (build)
+    dependencies.
+
+ -- gregor herrmann <gregor+debian@comodo.priv.at>  Tue, 22 Aug 2006 00:06:30 +0200
+
+libxml-atom-perl (0.16a-0.1) unstable; urgency=low
+
+  * Doh!  In my haste to upload this, I accidently made the package
+    debian-native.
+
+ -- Jaldhar H. Vyas <jaldhar@debian.org>  Fri,  3 Feb 2006 10:51:35 -0500
+
+libxml-atom-perl (0.16-0.1) unstable; urgency=low
+
+  * NMU. New upstrem version.  (Closes: #350850)
+  * remove editor swap file inadvertently left in package.  (Closes: #331004)
+
+ -- Jaldhar H. Vyas <jaldhar@debian.org>  Fri,  3 Feb 2006 10:15:16 -0500
+
+libxml-atom-perl (0.09-1) unstable; urgency=low
+
+  * New Upstream Version (closes #283590)
+
+ -- Tim Peeler <thp@linuxforce.net>  Fri, 31 Dec 2004 09:14:58 +0500
+
+libxml-atom-perl (0.05-1) unstable; urgency=low
+
+  * Initial Release.
+
+ -- Tim Peeler <thp@linuxforce.net>  Thu, 15 Apr 2004 12:23:14 +0500
