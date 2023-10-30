@@ -1,15 +1,46 @@
-Source: template-repository
-Section: unknown
+Source: libxml-atom-perl
+Maintainer: Debian Perl Group <pkg-perl-maintainers@lists.alioth.debian.org>
+Uploaders: gregor herrmann <gregoa@debian.org>,
+           Damyan Ivanov <dmn@debian.org>
+Section: perl
+Testsuite: autopkgtest-pkg-perl
 Priority: optional
-Maintainer: Tsic404 <liuheng@deepin.org>
-Build-Depends: debhelper (>= 11)
-Standards-Version: 4.1.3
-Homepage: https://github.com/deepin-community/template-repository
-#Vcs-Browser: https://salsa.debian.org/debian/deepin-community-template-repository
-#Vcs-Git: https://salsa.debian.org/debian/deepin-community-template-repository.git
+Build-Depends: debhelper-compat (= 13),
+               libmodule-build-tiny-perl,
+               perl
+Build-Depends-Indep: libcgi-pm-perl <!nocheck>,
+                     libclass-data-inheritable-perl <!nocheck>,
+                     libdatetime-perl <!nocheck>,
+                     libdatetime-timezone-perl <!nocheck>,
+                     libhtml-parser-perl <!nocheck>,
+                     liblwp-authen-wsse-perl <!nocheck>,
+                     liburi-perl <!nocheck>,
+                     libwww-perl <!nocheck>,
+                     libxml-libxml-perl (>= 2.0202) <!nocheck>,
+                     libxml-libxslt-perl <!nocheck>,
+                     libxml-xpath-perl <!nocheck>
+Standards-Version: 4.6.0
+Vcs-Browser: https://salsa.debian.org/perl-team/modules/packages/libxml-atom-perl
+Vcs-Git: https://salsa.debian.org/perl-team/modules/packages/libxml-atom-perl.git
+Homepage: https://metacpan.org/release/XML-Atom
+Rules-Requires-Root: no
 
-Package: template-repository
-Architecture: any
-Depends: ${shlibs:Depends}, ${misc:Depends}
-Description: <insert up to 60 chars description>
- <insert long description, indented with spaces>
+Package: libxml-atom-perl
+Architecture: all
+Depends: ${misc:Depends},
+         ${perl:Depends},
+         libcgi-pm-perl,
+         libclass-data-inheritable-perl,
+         libdatetime-perl,
+         libdatetime-timezone-perl,
+         libhtml-parser-perl,
+         liblwp-authen-wsse-perl,
+         liburi-perl,
+         libwww-perl,
+         libxml-libxml-perl (>= 2.0202),
+         libxml-libxslt-perl,
+         libxml-xpath-perl
+Description: module for manipulating Atom feeds
+ XML::Atom is a Perl module that implements the Atom syndication API and
+ archiving format for blogs and other data. This module consists of both
+ the protocol implementation and a simple client for the API.
