@@ -1,4 +1,16 @@
 #!/usr/bin/make -f
 
+PACKAGE = $(shell dh_listpackages)
+TMP     = $(CURDIR)/debian/$(PACKAGE)
+
 %:
 	dh $@
+
+override_dh_auto_test:
+	# no DNS queries
+	RES_OPTIONS=attempts:0 dh_auto_test
+
+override_dh_auto_install:
+	dh_auto_install
+	# remove empty manpages
+	find $(TMP)/usr/share/man/man3 -type f -size 0 -delete
